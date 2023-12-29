@@ -1,3 +1,4 @@
+import 'package:fitnestx/screens/activity_tracker_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitnestx/screens/welcome_screen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
       ),
-      home: const WelcomeScreen(),
+      home: const ActivityTrackerScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
