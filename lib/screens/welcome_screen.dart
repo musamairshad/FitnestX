@@ -7,12 +7,9 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final w = MediaQuery.sizeOf(context).width;
-    final h = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      backgroundColor: kLinear,
       body: Container(
-        margin: EdgeInsets.only(top: h * 0.7),
+        margin: const EdgeInsets.only(top: 300),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.bold,
                         fontSize: 50,
-                        color: Colors.white,
+                        color: Color(0xffCC8FED),
                       ),
                     ),
                   ],
@@ -46,33 +43,29 @@ class WelcomeScreen extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 18,
-                  color: Colors.white,
+                  color: kGray1,
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: h * 0.6),
-                child: ElevatedButton.icon(
+                margin: const EdgeInsets.only(top: 230),
+                child: ElevatedButton(
                   onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (ctx) => const AuthScreen(),
                     ),
                   ),
-                  icon: const Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    size: 25,
-                    color: Colors.black,
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(315, 60),
+                    backgroundColor: kLinear,
                   ),
-                  label: const Text(
+                  child: const Text(
                     "Get Started",
                     style: TextStyle(
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: kLinear,
+                      color: Colors.white,
                     ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(315, 60),
                   ),
                 ),
               ),
